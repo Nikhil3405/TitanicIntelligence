@@ -379,7 +379,7 @@ if ask_clicked:
         with st.spinner("Deciphering the passenger records…"):
             try:
                 response = requests.post(
-                    "http://localhost:8000/ask",
+                    "https://titanicintelligence.onrender.com/ask",
                     json={"question": query_to_send},
                     timeout=60
                 )
@@ -394,7 +394,7 @@ if ask_clicked:
                 )
 
                 if data.get("plot_available"):
-                    plot_response = requests.get("http://localhost:8000/plot", timeout=30)
+                    plot_response = requests.get("https://titanicintelligence.onrender.com/plot", timeout=30)
                     plot_response.raise_for_status()
                     image = Image.open(io.BytesIO(plot_response.content))
 
