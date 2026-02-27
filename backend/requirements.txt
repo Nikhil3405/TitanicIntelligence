@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pandas
+matplotlib
+seaborn
+langchain
+langchain-core
+langchain-google-genai
+google-generativeai
+python-dotenv
